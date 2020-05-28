@@ -2,7 +2,7 @@
 ## CamVid
 ### mapping between classes and RGB
 |label index| RGB | category|
-|-----------|-----|---------|
+|:---:|:---:|:---:|
 | None |(64, 128, 64) | Animal |
 | None |(192, 0, 128) | Archway |
 |  10  |(0, 128, 192) | Bicyclist |
