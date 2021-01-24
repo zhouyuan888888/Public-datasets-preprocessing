@@ -12,6 +12,8 @@ def plot_embedding(data, label, title):
     B = np.random.rand(np.max(label))
 
     fig = plt.figure()
+    plt.xlim(0, 1)
+    plt.ylim(0, 1)
     ax = plt.subplot(111)
     for i in range(length):
         if i < length*0.8:
