@@ -1,3 +1,6 @@
+from sklearn.manifold import TSNE
+import numpy as np
+
 def plot_embedding(data, label, title):
     x_min, x_max = np.min(data, 0), np.max(data, 0)
     data = (data - x_min) / (x_max - x_min)
@@ -19,3 +22,11 @@ def plot_embedding(data, label, title):
     #plt.yticks([])
     plt.title(title)
     return fig
+
+if __name__ == "__main__":
+    tsne = TSNE(n_components=2, init="pca", random_state=0)
+    feats = np.zeros(100, 256)
+    feats_tsne = tsne.fit_transform(train_test)
+    labels = np.ones(100)
+    fig = plot_embedding(feats_tsne, labels, 't-SNE')
+    plt.savefig("/home/zhouyuan/Desktop/hand" + str(args.missing_rate).split(".")[-1])
