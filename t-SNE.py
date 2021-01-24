@@ -26,7 +26,7 @@ def plot_embedding(data, label, title):
 if __name__ == "__main__":
     tsne = TSNE(n_components=2, init="pca", random_state=0)
     feats = np.zeros(100, 256)
-    feats_tsne = tsne.fit_transform(train_test)
+    feats_tsne = tsne.fit_transform(feats_tsne)
     labels = np.ones(100)
     fig = plot_embedding(feats_tsne, labels, 't-SNE')
     plt.savefig("/home/zhouyuan/Desktop/hand" + str(args.missing_rate).split(".")[-1])
